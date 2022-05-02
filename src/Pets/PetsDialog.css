@@ -1,0 +1,44 @@
+.pets__form {
+	margin: 0;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-evenly;
+	border-radius: 5px;
+}
+
+.form-btns {
+	display: flex;
+	justify-content: center;
+}
+
+.form-btn {
+	width: 30px;
+	margin: 5px;
+}
+
+.pets__input {
+	width: 180px;
+	margin: 0 10px;
+	padding: 5px 25px;
+	border-radius: 5px;
+	border-style: none;
+	background-color: #E0E0E0;
+	color: #424242;
+	font-family: 'Montserrat', sans-serif;
+}
+
+input.pets__input:focus {
+	outline: none;
+}
+
+input.pets__input:active {
+	border-style: none;
+}
+
+select.pets__input option {
+	font-size: 18px;
+}
+
+select.pets__input:focus {
+	outline: none;
+}

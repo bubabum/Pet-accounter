@@ -1,0 +1,32 @@
+.pets__list {
+	/* max-width: 300px; */
+	margin-inline: auto;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #333;
+}
+
+.pets__caption {
+	margin: 10px 25px;
+	font-weight: 700;
+	font-size: 28px;
+}
+
+/* .pets__btn {
+	margin-inline: auto;
+	height: 40px;
+	font-weight: 700;
+	border: none;
+	background-color: rgb(235, 255, 133);
+	border-radius: 25px;
+	width: 100%;
+	transition: 0.3s;
+	margin: 5px 0;
+}
+
+.pets__btn:hover {
+	opacity: 0.7;
+} */

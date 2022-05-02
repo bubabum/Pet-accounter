@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+	padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 
-.App-link {
-  color: #61dafb;
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+	list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+	margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+button {
+	padding: 5px;
+	font-size: 14px;
+	border-style: none;
+	border-radius: 5px;
+	transition: 0.3s;
+	color: #BDBDBD;
+	background-color: #616161;
+}
+
+button:hover {
+	background-color: #757575;
+}
+
+button:active {
+	transform: translate(0, 1px);
+}
+
+.box {
+	background-color: #616161;
+	border: 1px solid #757575;
+	border-radius: 5px;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	width: 100%;
+	background-color: #212121;
+	min-height: 100vh;
+	color: #f5f5f5
+}
+
+.pets {
+	width: 100%;
+	height: 100%;
+	padding: 0 50px;
+	position: relative;
+}
+
+.pets__header {
+	display: flex;
+	flex-direction: column;
+}
+
+.pets__header-block {
+	margin: 25px 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.pets__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+}
+
+.pets__captions {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	font-size: 12px;
+	margin: 20px 0 5px;
+	font-family: 'Roboto', sans-serif;
+	color: #9e9e9e;
+}
+
+.pets__captions .pets__name {
+	margin-left: 50px;
+}
+
+.pets__captions .pets__type {
+	justify-self: center;
+}
+
+.pets__captions .pets__feed {
+	justify-self: center;
+}
+
+.pets__divider {
+	width: 90%;
+	height: 1px;
+	border-style: none;
+	background-color: #bdbdbd;
+}
+
+.user {
+	margin: 25px;
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.user__name {
+	margin: 0 50px 0 10px
 }
